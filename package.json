@@ -1,12 +1,18 @@
 {
   "name": "error-pages",
   "version": "1.0.0",
-  "description": "根据错误代码动态生成的错误页面",
+  "description": "HTTP 错误页面服务 - 支持 Cloudflare Pages 部署",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "node server.js",
+    "pages:dev": "npx wrangler pages dev",
+    "pages:deploy": "npx wrangler pages deploy dist"
   },
   "dependencies": {
     "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
   }
 }
